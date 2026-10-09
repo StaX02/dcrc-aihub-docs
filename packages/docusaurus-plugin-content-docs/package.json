@@ -1,0 +1,72 @@
+{
+  "name": "@docusaurus/plugin-content-docs",
+  "version": "4.0.0",
+  "description": "Docs plugin for Docusaurus.",
+  "main": "lib/index.js",
+  "sideEffects": false,
+  "exports": {
+    "./lib/*": "./lib/*",
+    "./src/*": "./src/*",
+    "./client": {
+      "type": "./lib/client/index.d.ts",
+      "default": "./lib/client/index.js"
+    },
+    "./server": {
+      "type": "./lib/server-export.d.ts",
+      "default": "./lib/server-export.js"
+    },
+    ".": {
+      "types": "./src/plugin-content-docs.d.ts",
+      "default": "./lib/index.js"
+    }
+  },
+  "types": "src/plugin-content-docs.d.ts",
+  "scripts": {
+    "build": "tsc --build",
+    "watch": "tsc --build --watch"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/facebook/docusaurus.git",
+    "directory": "packages/docusaurus-plugin-content-docs"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@docusaurus/core": "workspace:*",
+    "@docusaurus/glob": "workspace:*",
+    "@docusaurus/logger": "workspace:*",
+    "@docusaurus/mdx-loader": "workspace:*",
+    "@docusaurus/module-type-aliases": "workspace:*",
+    "@docusaurus/theme-common": "workspace:*",
+    "@docusaurus/types": "workspace:*",
+    "@docusaurus/utils": "workspace:*",
+    "@docusaurus/utils-common": "workspace:*",
+    "@docusaurus/utils-validation": "workspace:*",
+    "@types/react-router-config": "^5.0.11",
+    "combine-promises": "^1.2.0",
+    "fs-extra": "^11.4.0",
+    "js-yaml": "^5.4.1",
+    "lodash": "^4.18.1",
+    "schema-dts": "^1.1.5",
+    "tslib": "^2.8.1",
+    "utility-types": "^3.11.0",
+    "webpack": "^5.111.0"
+  },
+  "devDependencies": {
+    "@total-typescript/shoehorn": "^0.1.2",
+    "@types/picomatch": "^2.3.4",
+    "commander": "^15.0.0",
+    "picomatch": "^2.3.2",
+    "react-router-dom": "^5.3.4"
+  },
+  "peerDependencies": {
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0"
+  },
+  "engines": {
+    "node": ">=24.21"
+  }
+}

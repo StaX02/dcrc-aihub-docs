@@ -1,0 +1,43 @@
+{
+  "name": "@docusaurus/preset-classic",
+  "version": "4.0.0",
+  "description": "Classic preset for Docusaurus.",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc --watch"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/facebook/docusaurus.git",
+    "directory": "packages/docusaurus-preset-classic"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@docusaurus/core": "workspace:*",
+    "@docusaurus/plugin-content-blog": "workspace:*",
+    "@docusaurus/plugin-content-docs": "workspace:*",
+    "@docusaurus/plugin-content-pages": "workspace:*",
+    "@docusaurus/plugin-css-cascade-layers": "workspace:*",
+    "@docusaurus/plugin-debug": "workspace:*",
+    "@docusaurus/plugin-google-gtag": "workspace:*",
+    "@docusaurus/plugin-google-tag-manager": "workspace:*",
+    "@docusaurus/plugin-sitemap": "workspace:*",
+    "@docusaurus/plugin-svgr": "workspace:*",
+    "@docusaurus/theme-classic": "workspace:*",
+    "@docusaurus/theme-common": "workspace:*",
+    "@docusaurus/theme-search-algolia": "workspace:*",
+    "@docusaurus/types": "workspace:*"
+  },
+  "peerDependencies": {
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0"
+  },
+  "engines": {
+    "node": ">=24.21"
+  }
+}

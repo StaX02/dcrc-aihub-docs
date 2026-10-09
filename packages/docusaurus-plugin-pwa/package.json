@@ -1,0 +1,52 @@
+{
+  "name": "@docusaurus/plugin-pwa",
+  "version": "4.0.0",
+  "description": "Docusaurus Plugin to add PWA support.",
+  "main": "lib/index.js",
+  "types": "src/plugin-pwa.d.ts",
+  "scripts": {
+    "build": "tsc --build && node ../../admin/scripts/copyUntypedFiles.js && oxfmt \"lib/theme/**/*.js\"",
+    "watch": "run-p -c copy:watch build:watch",
+    "build:watch": "tsc --build --watch",
+    "copy:watch": "node ../../admin/scripts/copyUntypedFiles.js --watch"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/facebook/docusaurus.git",
+    "directory": "packages/docusaurus-plugin-pwa"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@babel/core": "^7.29.7",
+    "@babel/preset-env": "^7.29.7",
+    "@docusaurus/bundler": "workspace:*",
+    "@docusaurus/core": "workspace:*",
+    "@docusaurus/logger": "workspace:*",
+    "@docusaurus/theme-common": "workspace:*",
+    "@docusaurus/theme-translations": "workspace:*",
+    "@docusaurus/types": "workspace:*",
+    "@docusaurus/utils": "workspace:*",
+    "@docusaurus/utils-validation": "workspace:*",
+    "babel-loader": "^10.1.1",
+    "clsx": "^2.1.1",
+    "tslib": "^2.8.1",
+    "webpack": "^5.111.0",
+    "workbox-build": "^7.4.1",
+    "workbox-precaching": "^7.4.1",
+    "workbox-window": "^7.4.1"
+  },
+  "devDependencies": {
+    "@docusaurus/module-type-aliases": "workspace:*",
+    "@types/react-dom": "^19.3.0"
+  },
+  "peerDependencies": {
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0"
+  },
+  "engines": {
+    "node": ">=24.21"
+  }
+}
