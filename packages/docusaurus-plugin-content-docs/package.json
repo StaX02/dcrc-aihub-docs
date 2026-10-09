@@ -57,9 +57,9 @@
   },
   "devDependencies": {
     "@total-typescript/shoehorn": "^0.1.2",
-    "@types/picomatch": "^2.3.4",
+    "@types/picomatch": "^4.0.3",
     "commander": "^15.0.0",
-    "picomatch": "^2.3.2",
+    "picomatch": "^4.0.7",
     "react-router-dom": "^5.3.4"
   },
   "peerDependencies": {
